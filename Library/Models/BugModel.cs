@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Library.Models
 {
@@ -14,6 +10,8 @@ namespace Library.Models
         public string bug_title;
         public string bug_description;
         public string bug_status;
+        public bool bug_is_completed;
+        public DateTime bug_created_on;
         public CategoryModel bug_category;
 
         public BugModel()
@@ -21,6 +19,8 @@ namespace Library.Models
             bug_title = string.Empty;
             bug_description = string.Empty;
             bug_status = string.Empty;
+            bug_is_completed = false;
+            bug_created_on = DateTime.Now;
             bug_category = new CategoryModel();
         }
 

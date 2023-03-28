@@ -1,16 +1,13 @@
 ﻿using Library.Exceptions;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Library.Models
 {
     /// <summary>
     /// Represents collections of all projects that have been created by the user.
     /// </summary>
-    
+
     internal class ProjectManager
     {
         private readonly List<ProjectModel> projects;
@@ -22,7 +19,7 @@ namespace Library.Models
 
 
         /// <summary>
-        /// Gets a project for the user
+        /// Gets project title for the user
         /// </summary>
         /// <param name="_project_title"></param>
         /// <returns>The project for the user </returns>

@@ -4,9 +4,27 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Library"
+        xmlns:views="clr-namespace:Library.Views"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800"
+        FontSize="14">
+
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Name="column_sidepanel" Width="0.25*"/>
+            <ColumnDefinition Name="column_contentpanel"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- SIDE PANEL -->
+        <Rectangle Fill="black" Grid.Column="0"/>
+        <!-- END OF SIDE PANEL -->
+
+        <!-- CONTENT PANEL -->
+        <Grid Grid.Column="1">
+            <views:ProjectDashboardView/>
+        </Grid>
+        <!-- END OF CONTENT PANEL -->
+
 
     </Grid>
 </Window>

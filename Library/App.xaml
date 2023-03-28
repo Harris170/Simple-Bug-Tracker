@@ -4,6 +4,36 @@
              xmlns:local="clr-namespace:Library"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+
+        <Style TargetType="Button">
+            <Setter Property="Padding" Value="8"/>
+            <Setter Property="FontWeight" Value="Medium"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="BorderThickness" Value="0"/>
+        </Style>
+
+        <Style TargetType="TextBox">
+            <Setter Property="Padding" Value="2"/>
+        </Style>
+
+        <Style TargetType="RichTextBox">
+            <Setter Property="Padding" Value="2"/>
+        </Style>
+
+        <Style TargetType="ListViewItem">
+            <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+        </Style>
+
+
+        <Style TargetType="ListView">
+            <Setter Property="Background" Value="white"/>
+            <Setter Property="BorderThickness" Value="0"/>
+        </Style>
+
+        <Style TargetType="GridViewColumnHeader">
+            <Setter Property="Background" Value="white"/>
+            <Setter Property="FontWeight" Value="Medium"/>
+        </Style>
+        
     </Application.Resources>
 </Application>

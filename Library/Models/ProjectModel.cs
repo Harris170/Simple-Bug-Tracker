@@ -1,9 +1,6 @@
 ﻿using Library.Exceptions;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Library.Models
 {
@@ -148,7 +145,7 @@ namespace Library.Models
         /// <param name="_bug_description"></param>
         /// <param name="_bug_status"></param>
         /// <param name="_bug_category"></param>
-        public void UpdateBug(BugModel _bug, string? _bug_title = null, string? _bug_description = null, string? _bug_status = null, CategoryModel? _bug_category = null)
+        public void UpdateBug(BugModel _bug, string? _bug_title = null, string? _bug_description = null, string? _bug_status = null, bool? _bug_is_completed = null, CategoryModel? _bug_category = null)
         {
             var bugs_list = new List<BugModel>(bugs);
 
@@ -160,10 +157,10 @@ namespace Library.Models
                     if(_bug_title != null) _bug.bug_title = _bug_title;
                     if (_bug_description != null) _bug.bug_description = _bug_description;
                     if (_bug_status != null) _bug.bug_status = _bug_status;
+                    if (_bug_is_completed != null) _bug.bug_is_completed = (bool)_bug_is_completed;
                     if (_bug_category != null) _bug.bug_category = _bug_category;
                 }
             }
-
         }
 
          //-----------------------------------------------------------------------------//
